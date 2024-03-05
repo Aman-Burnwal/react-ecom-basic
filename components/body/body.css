@@ -1,0 +1,16 @@
+.Body{
+    padding: 40px 30px;
+}
+
+.cards{
+
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 20px;
+    /* justify-content: center; */
+
+
+    margin: 10px;
+}

@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    scroll-behavior: smooth;
+}
+.login-signup{
+    display: flex;
+    gap: 20px;
+}
+
+.login-signup > button {
+    padding: 4px 10px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.fake-card{
+    width: 200px;
+    height: 330px;
+    margin: 1rem 2rem;
+
+    background-color: gainsboro;
+}
+.serch-container{
+    display: flex;
+    gap: 10px;
+}
+
+.search-input{
+    
+    padding-left: 10px;
+    outline: navy;
+  
+    
+}
+.btn-parent{
+    width: fit-content;
+    box-sizing: border-box;
+}
+.btn-sort{
+    width: fit-content;
+    padding: 4px 20px;
+    background-color: rgb(119, 165, 179);
+    cursor: pointer;
+    color: white;
+    margin-top: 1px;
+    user-select: none;
+ 
+}
+
+.footer{
+    width: 100%;
+    padding: 15px 0px;
+    background-color: rgb(9, 83, 72);
+
+    text-align: center;
+
+
+    color: white;
+    font: message-box;
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+#error-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}

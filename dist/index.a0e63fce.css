@@ -1,0 +1,11 @@
+.header {
+  box-sizing: border-box;
+  background-color: #15605e;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.a0e63fce.css.map */

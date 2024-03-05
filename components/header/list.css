@@ -1,0 +1,27 @@
+.navigaiton-continor{
+ position: relative;
+ /* background-color: rebeccapurple; */
+}
+
+.navigaiton-continor > ul  {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2vw;
+
+}
+
+.navigaiton-continor > ul > a > li {
+    cursor: pointer;
+    user-select: none;
+    font-size: 24px;
+    color: whitesmoke;
+    /* outline-color: red; */
+
+}
+
+.navigaiton-continor >ul > a {
+    
+   text-decoration: none;
+}
+
