@@ -34308,6 +34308,7 @@ var _index = require("../index");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
+    // actually i want to use my custom hook useFechcard to fetch the data but when i try to use it i get error 
     const [data, setData] = (0, _react.useState)([]);
     const [originalData, setOrignalData] = (0, _react.useState)([]);
     const [inputValue, setInputValue] = (0, _react.useState)("");
@@ -34328,12 +34329,74 @@ const Body = ()=>{
     };
     return originalData.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.SimulateData), {}, void 0, false, {
         fileName: "components/body/Body.jsx",
-        lineNumber: 45,
+        lineNumber: 48,
         columnNumber: 7
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.SimulateData), {}, void 0, false, {
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "serch-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        className: "search-input",
+                        type: "text",
+                        placeholder: "Search...",
+                        value: inputValue,
+                        onChange: (e)=>setInputValue(e.target.value)
+                    }, void 0, false, {
+                        fileName: "components/body/Body.jsx",
+                        lineNumber: 58,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: sorting_data_by_name,
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "components/body/Body.jsx",
+                        lineNumber: 65,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "btn-parent",
+                        onClick: sorting_data_by_rating,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _index.Button), {}, void 0, false, {
+                            fileName: "components/body/Body.jsx",
+                            lineNumber: 68,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "components/body/Body.jsx",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "components/body/Body.jsx",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "cards",
+                children: data.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)((0, _index.Card), {
+                        ...restaurant.info,
+                        key: restaurant?.info?.id,
+                        __source: {
+                            fileName: "components/body/Body.jsx",
+                            lineNumber: 74,
+                            columnNumber: 35
+                        },
+                        __self: undefined
+                    }))
+            }, void 0, false, {
+                fileName: "components/body/Body.jsx",
+                lineNumber: 73,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "components/body/Body.jsx",
-        lineNumber: 50,
-        columnNumber: 7
+        lineNumber: 54,
+        columnNumber: 5
     }, undefined);
 };
 _s(Body, "DqSLsZLgkzn6tqUjfelhtLaYNP8=");

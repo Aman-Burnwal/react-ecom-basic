@@ -7,6 +7,9 @@ import {Card, Button, SimulateData, API_URL} from "../index"
 
 const Body = () => {
 
+
+  // actually i want to use my custom hook useFechcard to fetch the data but when i try to use it i get error 
+
   const [data, setData] = useState([]);
   const [originalData, setOrignalData] = useState([])
 
@@ -47,31 +50,31 @@ const Body = () => {
     :
     (
 
-      <SimulateData />
-    // <div className="Body">
+     
+    <div className="Body">
       
-    //   <div className="serch-container">
+      <div className="serch-container">
 
-    //     <input
-    //       className="search-input"
-    //       type="text"
-    //       placeholder="Search..."
-    //       value={inputValue}
-    //       onChange={(e) =>setInputValue(e.target.value)}
-    //     />
-    //     <button onClick={sorting_data_by_name}>Search</button>
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search..."
+          value={inputValue}
+          onChange={(e) =>setInputValue(e.target.value)}
+        />
+        <button onClick={sorting_data_by_name}>Search</button>
 
-    //     <div className="btn-parent" onClick={sorting_data_by_rating}>
-    //       <Button />
-    //     </div>
-    //   </div>
+        <div className="btn-parent" onClick={sorting_data_by_rating}>
+          <Button />
+        </div>
+      </div>
       
       
-    //   <div className="cards">
-    //     {data.map((restaurant) => <Card {...restaurant.info} key={restaurant?.info?.id} />)}
-    //   </div>
+      <div className="cards">
+        {data.map((restaurant) => <Card {...restaurant.info} key={restaurant?.info?.id} />)}
+      </div>
       
-    // </div>
+    </div>
   )
 }
 
