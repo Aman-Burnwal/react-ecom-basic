@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./body.css"
-import {Card, Button, SimulateData, API_URL} from "../index"
+import { Card, Button, SimulateData, API_URL, useFetchCard } from "../index"
 
 
 
@@ -8,51 +8,44 @@ import {Card, Button, SimulateData, API_URL} from "../index"
 const Body = () => {
 
 
-  // actually i want to use my custom hook useFechcard to fetch the data but when i try to use it i get error 
-
   const [data, setData] = useState([]);
   const [originalData, setOrignalData] = useState([])
-
   const [inputValue, setInputValue] = useState("");
+
+  const fetchedData = useFetchCard();
+
 
   useEffect(() => {
 
-    fetchData()
-
-  }, [])
+    setData(fetchedData);
 
 
-  const fetchData = async () => {
-    const data2 = await fetch(API_URL);
-    const json = await data2.json();
-    setOrignalData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setOrignalData(fetchedData);
 
-  }
- 
+  }, [fetchedData]);
+
 
   const sorting_data_by_rating = () => setData(originalData.filter((e) => e.info.avgRating > 4.2));
 
-  
+  const sort_data_by_ratingWise = () => {
+    const sorted = [...originalData].sort((b, a) => a.info.avgRating - b.info.avgRating)
+    setData(sorted);
 
-  const sorting_data_by_name = () => {
-    if (!inputValue.trim()) return;
-     console.log(inputValue, originalData[0]?.info.name);
-    setData(originalData.filter((data) => data?.info?.name.toLowerCase().includes(inputValue.trim().toLowerCase())))
   }
 
-  return originalData.length === 0
-    ?
-    (
 
-      <SimulateData />
-    )
-    :
-    (
+  const sorting_data_by_name = () => {
+    !inputValue.trim() ?
+      setData(originalData) :
+      setData(originalData.filter((data) => data?.info?.name.toLowerCase().includes(inputValue.trim().toLowerCase())))
+  }
 
-     
-    <div className="Body">
-      
+
+
+  return originalData.length === 0 ?
+    (<SimulateData />) :
+    (<div className="Body">
+
       <div className="serch-container">
 
         <input
@@ -60,22 +53,26 @@ const Body = () => {
           type="text"
           placeholder="Search..."
           value={inputValue}
-          onChange={(e) =>setInputValue(e.target.value)}
+          onChange={(e) => setInputValue(e.target.value)}
         />
         <button onClick={sorting_data_by_name}>Search</button>
 
         <div className="btn-parent" onClick={sorting_data_by_rating}>
-          <Button />
+          <Button  content={"Show higher rating"}/>
         </div>
+        <div className="btn-parent" onClick={sort_data_by_ratingWise}>
+          <Button content={"Sort data by higher rating"} />
+        </div>
+
       </div>
-      
-      
+
+
       <div className="cards">
         {data.map((restaurant) => <Card {...restaurant.info} key={restaurant?.info?.id} />)}
       </div>
-      
+
     </div>
-  )
+    )
 }
 
 export default Body 

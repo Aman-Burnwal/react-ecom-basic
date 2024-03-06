@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const Button = () => {
+const Button = ({content}) => {
 
     
   return (
-    <div className="btn-sort">Sort by higher rating</div>
+    <div className="btn-sort">{ content }</div>
   )
 }
 
