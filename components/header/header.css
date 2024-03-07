@@ -1,12 +1,25 @@
 .header{
     position: relative;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     background-color: #15605E;
     align-items:  center;
     height: 100px;
+    /* overflow: hidden; */
 
     padding: 0px 20px;
+}
+
+@media (min-width: 380px) {
+    .btn-login-logout{
+        display: none;
+    }
+}
+
+@media(min-width: 500px) {
+    .btn-login-logout{
+        display: block;
+    }
 }

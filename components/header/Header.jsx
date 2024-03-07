@@ -21,7 +21,7 @@ const Header = () => {
 
       <div className="login-signup">
         <List />
-        <button onClick={changeLogin} >{isLogin}</button>
+        <button className='btn-login-logout' onClick={changeLogin} >{isLogin}</button>
       </div>
 
     </div>

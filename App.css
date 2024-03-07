@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 
@@ -77,3 +78,15 @@ body{
     align-content: center;
     align-items: center;
 }
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    font-size: xx-large;
+    
+
+    
+}
+
