@@ -12,14 +12,14 @@ const Body = () => {
 /* These lines of code are initializing state variables using the `useState` hook in a React functional
 component named `Body`. Here's a breakdown of what each state variable is used for: */
 
-  const [data, setData] = useState([]);
-  const [originalData, setOrignalData] = useState([])
+  const [data, setData] = useState(Swiggy_DATA);
+  const [originalData, setOrignalData] = useState(Swiggy_DATA)
   const [inputValue, setInputValue] = useState("");
 
  /* This code snippet is a React functional component named `Body` that handles the rendering and
  functionality of a UI component. Here's a breakdown of what it does: */
   // const fetchedData = useFetchCard();
-  const fetchedData = Swiggy_DATA;
+   
 
 
 
