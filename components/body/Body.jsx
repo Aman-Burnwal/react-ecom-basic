@@ -25,14 +25,14 @@ component named `Body`. Here's a breakdown of what each state variable is used f
 
 /* The `useEffect` hook in the provided code snippet is used to perform side effects in a functional
 component. In this specific case: */
-  useEffect(() => {
+  // useEffect(() => {
 
-    setData(fetchedData);
+  //   setData(fetchedData);
 
 
-    setOrignalData(fetchedData);
+  //   setOrignalData(fetchedData);
 
-  }, [fetchedData]);
+  // }, [fetchedData]);
 
 /**
  * The functions `sorting_data_by_rating` and `sort_data_by_ratingWise` are used to filter and sort
