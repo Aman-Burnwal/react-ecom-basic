@@ -2,10 +2,12 @@
   "name": "episode-4-talk-is-cheap-show-me-code",
   "version": "1.0.0",
   "description": "chapter 4",
-  "main": "App.js",
+
   "scripts": {
     "test": "jest",
-    "start": "npx parcel index.html"
+    "start": "npx parcel index.html",
+
+    "build": "npx parcel build index.html"
   },
   "keywords": [
     "Namste",
@@ -14,13 +16,13 @@
   "author": "Aman Burnwal",
   "license": "ISC",
   "dependencies": {
-    "parcel": "^2.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2"
   },
   "devDependencies": {
     "@types/react-dom": "^18.2.19",
+    "parcel": "^2.12.0",
     "process": "^0.11.10"
   }
 }
