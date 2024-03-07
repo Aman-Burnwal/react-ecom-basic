@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import "./body.css"
-import { Card, Button, SimulateData, API_URL, useFetchCard } from "../index"
+import { Card, Button, SimulateData, useFetchCard, Swiggy_DATA } from "../index"
 
 
 
@@ -18,7 +18,9 @@ component named `Body`. Here's a breakdown of what each state variable is used f
 
  /* This code snippet is a React functional component named `Body` that handles the rendering and
  functionality of a UI component. Here's a breakdown of what it does: */
-  const fetchedData = useFetchCard();
+  // const fetchedData = useFetchCard();
+  const fetchedData = Swiggy_DATA;
+
 
 
 /* The `useEffect` hook in the provided code snippet is used to perform side effects in a functional
