@@ -2,7 +2,7 @@
 
 const City = (props) => {
  
-  console.log("city", props)
+  // console.log("city", props)
  
   return (
     <div>

@@ -1,17 +1,22 @@
 
 
+import { useEffect, useState } from "react";
 import {useFetchResturantDetails} from "./index"
 
 
 
 const Resturants = () => {
+  const [ restaurants, setRestaurants] = useState([])
 
+  const data = useFetchResturantDetails();
 
-    const data = useFetchResturantDetails();
-    console.log(data)
+  useEffect(() => {
+    if (data) setRestaurants(data?.data?.cards[0]?.card?.card);
+  }, [data])
+  
+  console.log(restaurants)
 
-
-    return (
+    return (data && data.length == 0) ? <h1> heelo</h1> :  (
       
     <div>Resturants</div>
   )

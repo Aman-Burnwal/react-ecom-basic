@@ -9,18 +9,18 @@ const Footer = () => {
 
   useEffect(() => {
 
-    setCities(data);
+    setCities(data?.data?.cards[10]?.card?.card?.cities);
 
     
   }, [data])
+  // console.log("data", cities);
 
-  let i = 0;
   
-  return (cities.length == 0) ? <h1> Loading</h1> : (
+  return (!cities || cities.length == 0) ? <h1> Loading</h1> : (
     
     
     <div className="footer">
-      <div className="footer-city">
+      <div className="footer-city" >
         {cities.map((city) => {
 
           let cityname = city.text;

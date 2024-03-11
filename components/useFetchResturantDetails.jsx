@@ -24,9 +24,7 @@ const useFetchResturantDetails = () => {
 
             const json = await data.json();
 
-            setRestData(json?.data?.cards[10]?.card?.card?.cities)
-            // console.log("data")
-            // console.log(json?.data?.cards[10]?.card?.card?.cities)
+            setRestData(json)
 
         } catch (error) {
             console.log("error ", error.message);
