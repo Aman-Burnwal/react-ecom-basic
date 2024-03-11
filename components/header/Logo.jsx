@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logo = ({logo}) => {
   return (
-      <div >
+      <div className="w-5 h-7" >
           <img height="50px" src={logo}/>
       </div>
   )

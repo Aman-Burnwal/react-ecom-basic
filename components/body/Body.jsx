@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import "./body.css"
 import { Card, Button, SimulateData, useFetchCard, Swiggy_DATA } from "../index"
+import { Link } from "react-router-dom";
 
 
 
@@ -12,27 +13,27 @@ const Body = () => {
 /* These lines of code are initializing state variables using the `useState` hook in a React functional
 component named `Body`. Here's a breakdown of what each state variable is used for: */
 
-  const [data, setData] = useState(Swiggy_DATA);
-  const [originalData, setOrignalData] = useState(Swiggy_DATA)
+  const [data, setData] = useState([]);
+  const [originalData, setOrignalData] = useState([])
   const [inputValue, setInputValue] = useState("");
 
  /* This code snippet is a React functional component named `Body` that handles the rendering and
  functionality of a UI component. Here's a breakdown of what it does: */
-  // const fetchedData = useFetchCard();
+  const fetchedData = useFetchCard();
    
-
+  
 
 
 /* The `useEffect` hook in the provided code snippet is used to perform side effects in a functional
 component. In this specific case: */
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   setData(fetchedData);
+    setData(fetchedData);
 
 
-  //   setOrignalData(fetchedData);
+    setOrignalData(fetchedData);
 
-  // }, [fetchedData]);
+  }, [fetchedData]);
 
 /**
  * The functions `sorting_data_by_rating` and `sort_data_by_ratingWise` are used to filter and sort
@@ -95,7 +96,14 @@ If the `originalData` array has data, it renders a `div` element with the class 
 
 
       <div className="cards">
-        {data.map((restaurant) => <Card {...restaurant.info} key={restaurant?.info?.id} />)}
+        {data.map((restaurant) => {
+          // console.log(restaurant?.info?.id)
+          const id = restaurant?.info?.id
+          return (<Link key={id} to={"/restaurant/" +id} >
+            <Card {...restaurant.info} key={id} />
+            </Link>)
+          
+        })}
       </div>
 
     </div>

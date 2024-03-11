@@ -18,11 +18,16 @@ import Footer from "./footer/Footer";
 import ContactUs from "./body/ContactUs";
 import Errorelement from "./Errorelement";
 import useFetchCard from "./useFetchCard";
-import { API_URL , Swiggy_DATA} from "./StaticData";
+import { API_URL, Swiggy_DATA, Restaurant_List } from "./StaticData";
+import useFetchResturantDetails from "./useFetchResturantDetails";
+import City from "./footer/City";
 
 export {
+    Restaurant_List,
     API_URL,
     Swiggy_DATA,
+    City,
+    useFetchResturantDetails,
     useFetchCard,
     Errorelement,
     SimulateData,

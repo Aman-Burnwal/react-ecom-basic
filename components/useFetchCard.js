@@ -3,6 +3,7 @@ import { API_URL } from "./StaticData";
 
 const useFetchCard = () => {
     const [data, setData] = useState([]);
+    const [cities, setCities] = useState([]);
 
     const fetchData = async () => {
         try {
@@ -23,6 +24,8 @@ const useFetchCard = () => {
             }
 
             const json = await response.json();
+            // console.log(json?.data);
+            setCities(data?.data?.cards[10]?.card?.card?.cities)
             setData(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         } catch (error) {
             console.error("Error fetching data:", error.message);
