@@ -15,7 +15,7 @@ const Resturants = () => {
     if (data) setRestaurants(data?.data?.cards[0]?.card?.card);
   }, [data])
   
-  console.log(restaurants)
+  // console.log(restaurants)
 
   return (data && restaurants) ? <>
     
