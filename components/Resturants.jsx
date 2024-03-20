@@ -11,12 +11,19 @@ const Resturants = () => {
   const data = useFetchResturantDetails();
 
   useEffect(() => {
+    console.log(data)
     if (data) setRestaurants(data?.data?.cards[0]?.card?.card);
   }, [data])
   
   console.log(restaurants)
 
-    return (data && data.length == 0) ? <h1> heelo</h1> :  (
+  return (data && restaurants) ? <>
+    
+    <div>
+      <h2>{ restaurants?.header?.title }</h2>
+    </div>
+    
+  </> : (
       
     <div>Resturants</div>
   )
