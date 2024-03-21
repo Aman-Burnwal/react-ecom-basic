@@ -105,3 +105,58 @@ body{
     
 }
 
+.resturant-card{
+    background-color: rgb(21, 9, 9);
+    width: 100%;
+    color: white;
+    
+}
+
+
+.resturant-header, .itme-card {
+
+    padding:  10px 0;
+  
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.resturant-card-header{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.resturant-card-header> h1 {
+   
+    font-size: 40px;
+    font-weight: 300;
+    color: rgb(222, 219, 219);
+    line-height: 38px;
+
+}
+
+.resturant-card-header > div {
+    display: flex;
+    
+    gap: 20px;
+}
+
+.resturant-card-header>div > div {
+    border-right: 1 px solid rgb(195, 60, 60);
+}
+
+.resturant-card-rating{
+    padding: 2px 5px;
+    border-radius: 2px;
+    background-color: rgb(46, 209, 46);
+}
+
+.itme-card {
+    border-bottom: 1px solid rgb(195, 60, 60);
+    /* height: 400px; */
+    margin-bottom: 2rem;
+    padding: 2rem;
+}

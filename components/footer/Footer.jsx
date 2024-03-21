@@ -1,22 +1,23 @@
 
 import { useState, useEffect } from "react";
-import { City, useFetchResturantDetails } from "../index";
+import { City, useFetchCard, useFetchResturantDetails } from "../index";
 
 const Footer = () => {
 
-  const data = useFetchResturantDetails();
-  const [cities, setCities] = useState([]);
-  const [showAllCities, setShowAllCities] = useState(false);
+  const {cities} = useFetchCard();
+  // const [citiess, setCities] = useState([]);
+  // const [showAllCities, setShowAllCities] = useState(false);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    setCities(data?.data?.cards[10]?.card?.card?.cities);
+  //   setCities(data?.cities);
     
-  }, [data])
-  const toggleShowAllCities = () => {
-    setShowAllCities(!showAllCities);
-  };
+  // }, [data])
+  // const toggleShowAllCities = () => {
+  //   setShowAllCities(!showAllCities);
+  // };
   // console.log("data", cities);
+  return;
 
   
   return (!cities || cities.length === 0) ? <h1> Loading</h1> : (

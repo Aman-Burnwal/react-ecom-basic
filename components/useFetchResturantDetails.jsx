@@ -1,5 +1,5 @@
 import  { useEffect, useState } from 'react'
-import { API_URL } from './StaticData'
+import { Restaurant_List } from './StaticData'
 import { useParams } from "react-router-dom";
 
 const useFetchResturantDetails = () => {
@@ -8,7 +8,7 @@ const useFetchResturantDetails = () => {
 
     const [restData, setRestData] = useState([]);
 
-    const API = API_URL + resId;
+    const API = Restaurant_List + resId;
 
 
     const fetchResData = async () => {
